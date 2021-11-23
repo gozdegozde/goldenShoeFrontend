@@ -1,21 +1,25 @@
+import { Link } from "react-router-dom";
+
 export default function Product({ product }) {
+  
   return (
-    <div
-      style={{
-        width: "25%",
-        padding: "10px",
-        boxSizing: "border-box",
-      }}
-    >
-      <strong>{product.name}</strong> ({product.description})
-      <img
+     
+         
+    <td >
+      <Link to= {`/product/${product.id}`}><strong>{product.name}</strong> ({product.description}) </Link>
+    
+      <img 
         src={product.imageUrl}
         alt={product.description}
         style={{
-          display: "block",
-          maxWidth: "100%",
+          
+           width: "350px",
+          height: "350px"
         }}
+        
       />
-    </div>
+      </td>
+
   );
 }
+
